@@ -62,3 +62,22 @@ for artist in boston_calling:
 for artist in lightning_in_a_bottle:
     add_Tree_Node(artist, lightning_in_a_bottle_node)
 
+#Welcome user
+print('''       
+                      *****************                   
+                   ****************  **                       
+                ****************     ** 
+              **                     ** 
+              **                     ** 
+              **                     ** 
+              **                     ** 
+              **                @@@@ **
+              **               @@@@@@** 
+         @@@@ **               @@@@@@**           
+        @@@@@@**                @@@@
+        @@@@@@**
+         @@@@
+         ''')
+
+name = input('Welcome to the Music Festival Recommendation Tool!\nThis program will help you find which festivals your favorite artist is playing at.\nWhat is your name: ')
+
