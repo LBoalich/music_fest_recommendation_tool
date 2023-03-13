@@ -15,4 +15,5 @@ boston_calling = ['Nine Inch Nails', 'Rufus Du Sol', 'Haim', 'Avril Lavigne', 'C
 lightning_in_a_bottle = ['Glass Animals', 'Big Wild', 'Chet Faker', 'Seth Troxler', 'Koffee', 'Kaytranada', 'Four Tet', 'Clozee', 'Griz', 'Black Coffee', 'SG Lewis', 'Ekali']
 
 camping = ['Firefly Festival', 'Bonnaroo', 'Coachella', 'Lightning in a Bottle']
+
 non_camping = ['Lollapalooza', 'Shaky Knees', 'Hangout Fest', 'Boston Calling']
