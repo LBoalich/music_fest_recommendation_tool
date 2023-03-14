@@ -85,14 +85,29 @@ print('''
 
 name = input('Welcome to the Music Festival Recommendation Tool!\nThis program will help you find which festivals your favorite artist is playing at.\nWhat is your name: ')
 
-#choose if you want to search for camping, non-camping, or both types of festivals
-festival_type_node = festival_type(root_node, camping_node, non_camping_node, name)
+def run_program(root_node, camping_node, non_camping_node, name):
+    #choose if you want to search for camping, non-camping, or both types of festivals
+    festival_type_node = festival_type(root_node, camping_node, non_camping_node, name)
 
-#find matching artists based on user search
-possible_artist_matches = find_artists(festival_type_node)
+    #find matching artists based on user search
+    possible_artist_matches = find_artists(festival_type_node)
 
-#choose artist from matches
-chosen_artist = choose_artist(possible_artist_matches, festival_type_node)
+    #choose artist from matches
+    chosen_artist = choose_artist(possible_artist_matches, festival_type_node)
 
-#find fistivals based on chosen artist and festival type
-find_festivals(festival_type_node, chosen_artist)
+    #find fistivals based on chosen artist and festival type
+    find_festivals(festival_type_node, chosen_artist)
+
+def search_quit(root_node, camping_node, non_camping_node, name):
+    search_again = input('Do you want to start a new search?  Type "yes" to seach or "no" to quit: ').lower()
+    while search_again not in ['yes', 'no']:
+        search_again = input('Please type "yes" to search or "no" to quit: ').lower()
+    if search_again == 'yes':
+        run_program(root_node, camping_node, non_camping_node, name)
+        search_quit(root_node, camping_node, non_camping_node, name)
+    else:
+        print(f'Thank You {name} for using the Music Festival Recommendation Tool!\nHave a wonderful day :)')
+        quit()
+
+run_program(root_node, camping_node, non_camping_node, name)
+search_quit(root_node, camping_node, non_camping_node, name)
