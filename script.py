@@ -3,7 +3,7 @@ from Tree_Node import TreeNode
 from add_Tree_Node import add_Tree_Node
 from festival_type import festival_type
 from find_artists import find_artists
-
+from find_festivals import find_festivals
 
 #create Tree
 root_node = TreeNode("Music Festivals")
@@ -89,4 +89,6 @@ festival_type_node = festival_type(root_node, camping_node, non_camping_node, na
 
 #find matching artists based on user search
 possible_artist_matches = find_artists(festival_type_node)
+
+#find fistivals based on chosen artist and festival type
 
