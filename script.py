@@ -1,6 +1,8 @@
+from data import *
 from Tree_Node import TreeNode
 from add_Tree_Node import add_Tree_Node
-from data import *
+from find_artists import find_artists
+
 
 #create Tree
 root_node = TreeNode("Music Festivals")
@@ -80,4 +82,7 @@ print('''
          ''')
 
 name = input('Welcome to the Music Festival Recommendation Tool!\nThis program will help you find which festivals your favorite artist is playing at.\nWhat is your name: ')
+
+#find matching artists based on user search
+possible_artist_matches = find_artists(root_node)
 
