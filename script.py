@@ -1,6 +1,7 @@
 from data import *
 from Tree_Node import TreeNode
 from add_Tree_Node import add_Tree_Node
+from festival_type import festival_type
 from find_artists import find_artists
 
 
@@ -83,6 +84,9 @@ print('''
 
 name = input('Welcome to the Music Festival Recommendation Tool!\nThis program will help you find which festivals your favorite artist is playing at.\nWhat is your name: ')
 
+#choose if you want to search for camping, non-camping, or both types of festivals
+festival_type_node = festival_type(root_node, camping_node, non_camping_node, name)
+
 #find matching artists based on user search
-possible_artist_matches = find_artists(root_node)
+possible_artist_matches = find_artists(festival_type_node)
 
